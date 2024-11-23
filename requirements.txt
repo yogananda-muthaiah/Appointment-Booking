@@ -1,0 +1,4 @@
+fastapi
+pysqlite3
+pydantic
+uvicorn

@@ -1,0 +1,31 @@
+@url = http://127.0.0.1:3000
+
+###
+GET {{url}}/available-timeslots?date=2024-11-23
+Content-Type: application/json
+
+###
+GET {{url}}/booked-appointments?date=2024-11-22
+Content-Type: application/json
+
+###
+POST {{url}}/generate-timeslots
+Content-Type: application/json
+
+{"date": "2024-11-23"}
+
+###
+POST {{url}}/book-appointment
+Content-Type: application/json
+
+{
+    "slot_id": 1,
+    "customer_name": "Yoga",
+    "customer_email": "yoga@abc.com",
+    "customer_phone": 1221111
+}
+
+###
+ POST @{{url}}/cancel-appointment
+
+###

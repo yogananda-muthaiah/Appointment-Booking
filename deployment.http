@@ -1,0 +1,33 @@
+@url = https://booking-appointment.cfapps.us10-001.hana.ondemand.com
+
+###
+GET {{url}}/available-timeslots?date=2024-11-23
+Content-Type: application/json
+
+###
+GET {{url}}/booked-appointments?date=2024-11-23
+Content-Type: application/json
+
+###
+POST {{url}}/generate-timeslots
+Content-Type: application/json
+
+{"date": "2024-11-23"}
+
+###
+POST {{url}}/book-appointment
+Content-Type: application/json
+
+{
+    "slot_id": 16,
+    "customer_name": "Yoga",
+    "customer_email": "yoga@abc.com",
+    "customer_phone": 1221111
+}
+
+###
+POST {{url}}/cancel-appointment
+Content-Type: application/json
+
+{"slot_id": 16}
+###

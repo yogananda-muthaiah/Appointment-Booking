@@ -1,0 +1,8 @@
+applications:
+  - name: booking-appointment
+    memory: 64MB
+    disk_quota: 512M
+    host: booking-appointment
+    domain: cfapps.us10-001.hana.ondemand.com
+    buildpacks: ["python_buildpack"]
+    command: python app.py
